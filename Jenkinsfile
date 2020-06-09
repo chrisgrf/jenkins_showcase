@@ -3,8 +3,10 @@ pipeline {
 
   stages {
     stage('Do Stuff') {
-      sh 'cat /app/hello.txt'
-      sh 'pwd'
+      steps {
+        sh 'cat /app/hello.txt'
+        sh 'pwd'
+      }
     }
   }
 }
