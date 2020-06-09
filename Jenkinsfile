@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Clean up Before') {
-            steps {
-                sh 'rm -rf *'
-            }
-        }
-
         stage('Do Stuff') {
             steps {
                 sh 'ls -lrat'
@@ -24,7 +18,7 @@ pipeline {
             }
         }
             
-        stage('Clean up After') {
+        stage('Clean up') {
             steps {
                 sh 'rm -rf *'
             }
