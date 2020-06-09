@@ -10,6 +10,7 @@ pipeline {
         stage('Clean up Before') {
             steps {
                 sh 'rm -rf *'
+            }
         }
 
         stage('Do Stuff') {
@@ -26,6 +27,7 @@ pipeline {
         stage('Clean up After') {
             steps {
                 sh 'rm -rf *'
+            }
         }
     }
 }
