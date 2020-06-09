@@ -7,6 +7,11 @@ pipeline {
     }
 
     stages {
+        stage('Clean up Before') {
+            steps {
+                sh 'rm -rf *'
+        }
+
         stage('Do Stuff') {
             steps {
                 sh 'ls -lrat'
@@ -16,6 +21,11 @@ pipeline {
                 sh 'ls -lrat'
                 sh 'ls -lrat node_modules'
             }
+        }
+            
+        stage('Clean up After') {
+            steps {
+                sh 'rm -rf *'
         }
     }
 }
