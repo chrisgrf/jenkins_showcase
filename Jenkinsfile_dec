@@ -1,8 +1,6 @@
 pipeline {
   agent { 
-    dockerfile {
-      args '-u node -w /home/node'
-    }
+    dockerfile true
   }
 
   stages {
@@ -10,7 +8,6 @@ pipeline {
       steps {
         sh 'cat /app/hello.txt'
         sh 'pwd'
-        sh 'npm install axios'
       }
     }
   }
