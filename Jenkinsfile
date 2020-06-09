@@ -10,7 +10,6 @@ pipeline {
         stage('Do Stuff') {
             steps {
                 sh 'ls -lrat'
-                sh 'ls -lrat node_modules'
                 sh 'npm install'
                 sh 'pwd'
                 sh 'ls -lrat'
