@@ -1,18 +1,18 @@
 pipeline {
     agent { 
-        docker {  
-            image 'node' 
+        docker {
+            image 'node'
             args '-u root'
-        }  
+        }
     }
 
-  stages {
-    stage('Do Stuff') {
-      steps {
-        sh 'npm install'
-        sh 'pwd'
-        sh 'ls -lrat'
-      }
+    stages {
+        stage('Do Stuff') {
+            steps {
+                sh 'npm install'
+                sh 'pwd'
+                sh 'ls -lrat'
+            }
+        }
     }
-  }
 }
